@@ -38,3 +38,6 @@ next-env.d.ts
 # enviorment variables
 .env.development
 .env.production
+
+# local todo
+todo.txt

@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
 const App = ({ Component, pageProps }: AppProps) => {
   // Initially server side rendering will be true;
   const [isSSR, setIsSSR] = useState(true);
@@ -20,7 +22,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   }
 
   return (
-    <div>
+    <GoogleOAuthProvider clientId={`${process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN}`}>
       <Navbar />
       <div className='flex gap-6 md:gap-20'>
         <div className='h-[92vh] overflow-hidden xl:hover:overflow-auto'>
@@ -30,7 +32,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <Component {...pageProps} />
         </div>
       </div>
-    </div>
+    </GoogleOAuthProvider>
   );
 
 }
