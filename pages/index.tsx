@@ -18,7 +18,7 @@ const Home = ({ videos }: IProps) => {
           <VideoCard post = {video} key = {video._id}/>
         ))
       ) : (
-        <NoResults text = {'No Videos'}/>
+        <NoResults text = {'Be the first one to post a video!'}/>
       )}
     </div>
   );

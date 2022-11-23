@@ -18,10 +18,18 @@ const navbarStyle: CSSProperties = {
     backgroundColor: '#ffde54',
 }
 
-const style123 = "background-color: #ffde54;";
+interface addUserInterface {
+    (user: any): any
+}
+
+interface removeUserInterface {
+    (): any
+}
+
 
 const Navbar = () => {
-    const { userProfile, addUser, removeUser } = useAuthStore();
+    
+    const { userProfile, addUser, removeUser }: {userProfile: any, addUser: addUserInterface, removeUser: removeUserInterface} = useAuthStore();
 
     return (
         <div style={navbarStyle}>
