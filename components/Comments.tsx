@@ -30,13 +30,13 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment}
 
     return (
         <div className='border-t-2 border-gray-200 pt-4 px-10 bg-[#f8f8f8] border-b-2 lg:pb-0 pb-[100px]'>
-            <div className='overflow-scroll lg:h-[475px]'>
-                {Comments?.length ? (
+            <div className='overflow-scroll lg:h-[457px]'>
+                {comments?.length > 0 ? (
                     comments.map((comment, idx) => (
                         <>
                             {allUsers?.map((user: IUser) => (
                                 user._id === (comment.postedBy._id || comment.postedBy._ref) && (
-                                    <div className='p-2 items-center' key={idx}>
+                                    <div className='p-2 mb-4 items-center bg-white rounded-xl' key={idx}>
                                         <Link
                                             href={`/profile/${user._id}`}
                                         >
@@ -62,7 +62,7 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment}
                                                 </div>
                                             </div>
                                         </Link>
-                                        <div className=''>
+                                        <div className='pl-4 pt-1'>
                                             <p>
                                                 {comment.comment}
                                             </p>
@@ -78,7 +78,7 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment}
             </div>
 
             {userProfile && (
-                <div className='absolute bottom-0 left-0 pb-6 px-2 md:px-10'>
+                <div className='pt-5 pb-6 px-2 md:px-10'>
                     <form onSubmit={addComment} className='flex gap-4'>
                         <input 
                             value={comment}

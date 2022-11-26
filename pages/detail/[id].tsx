@@ -147,7 +147,7 @@ const Detail = ({ postDetails }: Iprops) => {
                   </Link>
               </div>
             </div>
-            <p className='px-10 text-lg text-gray-600'>
+            <p className='px-10 text-lg text-gray-600 pt-5'>
               {post.caption}
             </p>
             <div className='mt-10 px-10'>
