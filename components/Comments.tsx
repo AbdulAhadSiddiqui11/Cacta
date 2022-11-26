@@ -1,10 +1,11 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { GoVerified } from 'react-icons/go';
+import { GoVerified as VerifiedIcon } from 'react-icons/go';
 
 import useAuthStore from '../store/authStore';
 import NoResults from './NoResults';
+import { IUser } from '../types';
 
 interface IComment {
     comment: string;
@@ -24,15 +25,53 @@ interface Iprops {
     comments: IComment[];
 }
 
-const Comments = ({ comment, setComment, addComment, isPostingComment}: Iprops) => {
-    const { userProfile } = useAuthStore();
-    const comments = [];
+const Comments = ({ comment, setComment, addComment, comments, isPostingComment}: Iprops) => {
+    const { userProfile, allUsers } = useAuthStore();
 
     return (
         <div className='border-t-2 border-gray-200 pt-4 px-10 bg-[#f8f8f8] border-b-2 lg:pb-0 pb-[100px]'>
             <div className='overflow-scroll lg:h-[475px]'>
                 {Comments?.length ? (
-                    <div> Videos </div>
+                    comments.map((comment, idx) => (
+                        <>
+                            {allUsers?.map((user: IUser) => (
+                                user._id === (comment.postedBy._id || comment.postedBy._ref) && (
+                                    <div className='p-2 items-center' key={idx}>
+                                        <Link
+                                            href={`/profile/${user._id}`}
+                                        >
+                                            <div className='flex items-start gap-3'>
+                                                <div className='w-8 h-8'>
+                                                    <Image 
+                                                    src={user.image}
+                                                    width={34}
+                                                    height={34}
+                                                    className='rounded-full'
+                                                    alt='User Profile'
+                                                    layout='responsive'
+                                                    />
+                                                </div>
+                                                <div className='hidden xl:block'>
+                                                    <p className='flex gap-1 items-ceter text-md font-bold text-primary lowercase'>
+                                                    {user.userName.replaceAll(' ', '')}
+                                                    <VerifiedIcon className='text-blue-400'/>
+                                                    </p>
+                                                    <p className='capitalize text-gray-400 text-xs'>
+                                                    {user.userName}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                        <div className=''>
+                                            <p>
+                                                {comment.comment}
+                                            </p>
+                                        </div>
+                                    </div>
+                                )
+                            ))}
+                        </>
+                    ))
                 ) : (
                     <NoResults text="Be the first one to add a comment" />
                 )}
