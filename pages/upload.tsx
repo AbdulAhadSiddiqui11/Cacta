@@ -80,7 +80,7 @@ const Upload = () => {
     setSavingPost(false);
     setVideoAsset(undefined);
     setCaption('');
-    setTopic('');
+    setCategory('');
   };
   
   return (
