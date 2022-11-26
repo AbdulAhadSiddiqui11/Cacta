@@ -83,3 +83,5 @@ export const getServerSideProps = async ({params: { id }}: {params: {id: string}
 }
 
 export default Profile;
+
+// The Profile page is a page that displays the user's profile. It displays the user's profile picture, username, and the user's videos and liked videos. The user's videos and liked videos are displayed in a grid format. The user can toggle between the two by clicking on the Videos and Liked Videos tabs.
