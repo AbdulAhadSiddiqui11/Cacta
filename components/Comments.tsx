@@ -7,6 +7,7 @@ import useAuthStore from '../store/authStore';
 import NoResults from './NoResults';
 import { IUser } from '../types';
 
+// interfaces and types
 interface IComment {
     comment: string;
     length?: number;
