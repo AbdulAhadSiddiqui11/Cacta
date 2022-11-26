@@ -11,7 +11,7 @@ import { IUser, Video } from '../../types';
 import { BASE_URL } from '../../utils';
 import useAuthStore from '../../store/authStore';
 
-const searchResult = ({ videos }: { videos: Video[]}) => {
+const SearchResult = ({ videos }: { videos: Video[]}) => {
     const [isAccounts, setIsAccounts] = useState(false);
     const router = useRouter();
     const { searchTerm }: any = router.query;
@@ -88,4 +88,4 @@ export const getServerSideProps = async ({params: { searchTerm }}: {params: {sea
     }
   }
 
-export default searchResult;
+export default SearchResult;
