@@ -13,7 +13,7 @@ interface IComment {
     _key: string,
     postedBy: {
         _ref: string;
-        _id: string;
+        _id?: string;
     }
 }
 
