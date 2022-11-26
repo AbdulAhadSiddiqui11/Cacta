@@ -11,6 +11,7 @@ import { IUser, Video } from '../../types';
 import { BASE_URL } from '../../utils';
 import useAuthStore from '../../store/authStore';
 
+
 const SearchResult = ({ videos }: { videos: Video[]}) => {
     const [isAccounts, setIsAccounts] = useState(false);
     const router = useRouter();
