@@ -39,7 +39,7 @@ const SuggestedAccounts = () => {
               <div className='hidden xl:block'>
                 <p className='flex gap-1 items-ceter text-md font-bold text-primary lowercase'>
                   {user.userName.replaceAll(' ', '')}
-                  <VerifiedIcon className='text-blue-400'/>
+                  <VerifiedIcon className='text-blue-400 my-1'/>
                 </p>
                 <p className='capitalize text-gray-400 text-xs'>
                   {user.userName}

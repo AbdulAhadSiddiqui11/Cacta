@@ -48,7 +48,7 @@ const Profile = ({ data }: IProps) => {
         <div className='flex flex-col justify-center'>
           <p className='md:text-2xl tracking-wider flex gap-1 items-ceter justify-center text-md font-bold text-primary lowercase'>
             {user.userName.replaceAll(' ', '')}
-            <VerifiedIcon className='text-blue-400'/>
+            <VerifiedIcon className='text-blue-400 my-1'/>
           </p>
           <p className='capitalize md:text-xl text-gray-400 text-xs'>
             {user.userName}
