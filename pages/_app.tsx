@@ -7,6 +7,8 @@ import Sidebar from '../components/Sidebar';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
+import { Analytics } from '@vercel/analytics/react';
+
 const App = ({ Component, pageProps }: AppProps) => {
   // Initially server side rendering will be true;
   const [isSSR, setIsSSR] = useState(true);
@@ -31,6 +33,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           </div>
           <div className='mt-4 flex flex-col gap-10 overflow-auto h-[88vh] videos flex-1'>
             <Component {...pageProps} />
+            <Analytics />
           </div>
         </div>
       </div>
