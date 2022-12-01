@@ -130,5 +130,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2022 [Abdul Ahad Siddiqui](https://github.com/AbdulAhadSiddiqui11).<br />
+Copyright © 2023 [Abdul Ahad Siddiqui](https://github.com/AbdulAhadSiddiqui11).<br />
 This project is [MIT](https://github.com/AbdulAhadSiddiqui11/Cacta/blob/main/LICENSE) licensed.
