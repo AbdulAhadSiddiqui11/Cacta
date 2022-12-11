@@ -11,7 +11,7 @@
 
 </div>
 
-<h2 align="center">Cacta is deployed and live, click <a href="https://cacta.vercel.app">here</a> to join Cacta now!
+<h2 align="center">Cacta is deployed and live, click <a href="https://cacta.vercel.app" target="_blank">here</a> to join Cacta now!
 
 ### Cacta is a social media platform for creating, sharing and discovering short videos
 #### Features:
@@ -27,7 +27,7 @@
 ## Tech. stack
 ### Front-end stack
 * [Next.js](https://nextjs.org/)
-* [Reach.js](https://reactjs.org/)
+* [React.js](https://reactjs.org/)
 * [Tailwind CSS](https://tailwindcss.com/)
 * [Typescript](https://www.typescriptlang.org/)
 ### Back-end stack
