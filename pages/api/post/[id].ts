@@ -2,8 +2,12 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { uuid } from 'uuidv4';
 import { client } from '../../../utils/client';
 import { postDetailQuery } from '../../../utils/queries';
+import cors from '../../../lib/cors';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Run the cors middleware
+  await cors(req, res);
+  
   if(req.method === 'GET') {
     const {id}: any = req.query;
     const query = postDetailQuery(id);
