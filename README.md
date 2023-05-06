@@ -11,9 +11,14 @@
 
 </div>
 
-<!-- todo: update the domain -->
-<h2 align="center">Cacta is deployed and live, click <a href="https://cacta.abdulahadsiddiqui.com/" target="_blank">here</a> to join Cacta now!
+<h2 align="center">Cacta is deployed and live, click <a href="https://cacta.abdulahadsiddiqui.com" target="_blank">here</a> to join Cacta now! </h2>
 
+<p align="center">
+  <a href="https://cacta.abdulahadsiddiqui.com" target="_blank"> 
+    <img src="https://github.com/AbdulAhadSiddiqui11/Cacta/blob/main/static/cacta-home.png" alt="Cacta Home">
+  </a>
+</p>
+  
 ### Cacta is a social media platform for creating, sharing and discovering short videos
 #### Features:
 * <b>Modern & responsive design</b> : Cacta comes with beautiful modern design with fully responsive layout which results in an amazing UX
@@ -106,7 +111,7 @@ next build
 npm install
 < or >
 yarn install
-< or>
+< or >
 pnpm install
 ```
 * Congratulations your Cacta app is up and running!
