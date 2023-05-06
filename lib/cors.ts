@@ -1,7 +1,3 @@
-/* 
-Lib and all its contents/middleware are not utilzed for cors anymore
-We will be using the cors headers from nwxt.config.js instead
-*/
 import Cors, { CorsOptions } from 'cors';
 import initMiddleware from './init-middleware';
 
