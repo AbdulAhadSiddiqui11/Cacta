@@ -4,12 +4,8 @@ import { client } from '../../../utils/client';
 import { singleUserQuery,
         userCreatedPostsQuery,
         userLikedPostsQuery } from '../../../utils/queries';
-import cors from '../../../lib/cors';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Run the cors middleware
-  await cors(req, res);
-  
   if(req.method === 'GET') {
     const { id }: any = req.query;
 
